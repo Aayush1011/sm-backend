@@ -36,7 +36,13 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-app.use(helmet({ crossOriginResourcePolicy: false }));
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+    crossOriginEmbedderPolicy: false,
+    crossOriginOpenerPolicy: false,
+  })
+);
 app.use(compression());
 
 app.use(bodyParser.json()); // application/json
