@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const { v4: uuidv4 } = require("uuid");
-const helmet = require("helmet");
 const compression = require("compression");
 
 const feedRoutes = require("./routes/feed");
@@ -36,13 +35,6 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-app.use(
-  helmet({
-    crossOriginResourcePolicy: false,
-    crossOriginEmbedderPolicy: false,
-    crossOriginOpenerPolicy: false,
-  })
-);
 app.use(compression());
 
 app.use(bodyParser.json()); // application/json
