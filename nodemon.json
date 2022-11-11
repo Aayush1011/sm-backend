@@ -1,8 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "aayush1000",
-    "MONGO_PASSWORD": "TfRgk2OVPlWgqfGE",
-    "MONGO_DEFAULT_DATABASE": "messages",
-    "ITEMS_PER_PAGE": "2"
-  }
-}
